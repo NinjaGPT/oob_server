@@ -6,7 +6,7 @@ import os
 from urllib.parse import urlparse, parse_qs
 from datetime import datetime, timedelta
 
-HOST = '104.225.xxx.18' # OOB server's IP address
+HOST = '104.225.xxx.xx' # OOB server's IP address
 PORT = 8888             # HTTP port
 log_file = 'access.log'
 
