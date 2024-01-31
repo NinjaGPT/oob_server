@@ -22,7 +22,7 @@ the OOB server will generate and response a random URL like:
 http://oob_server:port/iF9d2k
 ```
 when client to access this random URL, it will create a txt file and logging client's IP.\
-and client can access `random_url?m=1` to validate
+and client can access `random_url?m=1` to check this
 ```
 http://oob_server:port/iF9d2k?m=1
 ```
