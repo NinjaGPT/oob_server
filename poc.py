@@ -2,7 +2,7 @@ import requests
 import time
 import re
 
-oob_server = 'http://104.225.xxx.18:8888'       # OOB Server
+oob_server = 'http://104.225.xxx.xx:8888'       # OOB Server
 get_url = oob_server + '/geturl'
 target_url = "http://victim.com:8443/vuln"      # vulnerable host
 
