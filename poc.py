@@ -12,7 +12,7 @@ def fetch_randomURL(url):
     try:
         print(f"[+] Fetching random URL from {url}")
         response = requests.get(url)
-        response.raise_for_status()  # 确保响应状态是OK
+        response.raise_for_status() 
         match = re.search(r'(http(s)?:\/\/[^\/]+\/[a-zA-Z0-9]{6})', response.text)
         return match.group(1) if match else None
     except Exception as e:
