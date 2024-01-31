@@ -6,13 +6,13 @@ import os
 from urllib.parse import urlparse, parse_qs
 from datetime import datetime, timedelta
 
-HOST = '104.225.143.18' # OOB server's IP address
+HOST = '104.225.xxx.18' # OOB server's IP address
 PORT = 8888             # HTTP port
 log_file = 'access.log'
 
 class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     active_urls = {}
-    url_visitors = {}  # 字典来追踪每个URL的访问者IP地址
+    url_visitors = {}  # visitors' IP
 
     def do_GET(self):
         try:
@@ -59,7 +59,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     def handle_geturl_request(self):
         random_url = ''.join(random.choices(string.ascii_letters + string.digits, k=6))
         self.active_urls[random_url] = datetime.now()
-        self.url_visitors[random_url] = set()  # 初始化访问者集合
+        self.url_visitors[random_url] = set()  # init
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
@@ -71,7 +71,7 @@ class MyHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             return
 
         query_components = parse_qs(urlparse(self.path).query)
-        file_name = self.path[1:7] + '.txt'  # 添加.txt扩展名
+        file_name = self.path[1:7] + '.txt'  # add .txt extension
 
         if 'm' in query_components and query_components['m'][0] == '1':
             self.read_and_send_file_content(file_name)
