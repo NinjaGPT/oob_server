@@ -1,4 +1,4 @@
-# OOB (Out Of Band) Server for blind RCE/SSRF vulnerability
+# OOB (Out Of Band) Server for blind RCE/SSRF/XXE/.. vulnerabilities
 
 * reference:
   https://notsosecure.com/out-band-exploitation-oob-cheatsheet
