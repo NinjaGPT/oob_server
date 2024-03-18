@@ -123,6 +123,7 @@ try:
 
     # Start the server
     print(f"Server started at http://{HOST}:{PORT}")
+    print(f"Access to http://{HOST}:{PORT}/geturl to fetch random URL.")
     my_server.serve_forever()
 except Exception as e:
     print(f"Failed to start server: {e}")
