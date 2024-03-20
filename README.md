@@ -1,11 +1,13 @@
 # OOB Server for blind vulns
 * Reference:
-  
+
   https://notsosecure.com/out-band-exploitation-oob-cheatsheet
   
 * Perfect OOB server project:
+
+  https://github.com/projectdiscovery/interactsh
 ```
-https://github.com/projectdiscovery/interactsh
+USAGE:
 
 [+] ON OOB SERVER (10.0.0.10)
 SHELL$ wget https://github.com/projectdiscovery/interactsh/releases/download/v1.1.9/interactsh-client_1.1.9_linux_amd64.zip
@@ -20,7 +22,8 @@ SHELL$ chmod a+x oob.sh;./oob.sh
 SHELL$ curl 10.0.0.10:8888/interactsh_payload.txt
 cntge6do4021ee5lcht0mnz1zbyh4zsnj.oast.me
 
-THE PAYLOAD LINK 'cntge6do4021ee5lcht0mnz1zbyh4zsnj.oast.me' can be use as blind payload, such as SSRF/XXE/RCE/Deserialization
+THE PAYLOAD LINK 'cntge6do4021ee5lcht0mnz1zbyh4zsnj.oast.me',
+can be use as blind payload, such as SSRF/XXE/RCE/Deserialization
 
 ```
 
