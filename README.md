@@ -1,12 +1,31 @@
 # OOB Server for blind vulns
-* Perfect OOB server project:
-  
-  https://github.com/projectdiscovery/interactsh
-
 * Reference:
   
   https://notsosecure.com/out-band-exploitation-oob-cheatsheet
+  
+* Perfect OOB server project:
+```
+https://github.com/projectdiscovery/interactsh
 
+[+] ON OOB SERVER (10.0.0.10)
+SHELL$ wget https://github.com/projectdiscovery/interactsh/releases/download/v1.1.9/interactsh-client_1.1.9_linux_amd64.zip
+
+SHELL$ cat oob.sh
+./interactsh-client -s oast.me -ps  &
+python3 -m http.server 8888
+
+SHELL$ chmod a+x oob.sh;./oob.sh
+
+[+] ON CLIENT (Test Machine)
+SHELL$ curl 10.0.0.10:8888/interactsh_payload.txt
+cntge6do4021ee5lcht0mnz1zbyh4zsnj.oast.me
+
+THE PAYLOAD LINK 'cntge6do4021ee5lcht0mnz1zbyh4zsnj.oast.me' can be use as blind payload, such as SSRF/XXE/RCE/Deserialization
+
+```
+
+----
+# FOR THIS TOOL
 ## How to use?
 ## server.py
 1. change HOST and PORT to your own OOB server's IP address and listen port.
